@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: apigateway
+
+#  cloud:
+#    gateway:
+#      routes:
+#        - id: client1-orderservice
+#          uri: lb://CLIENT1-ORDERSERVICE
+#          predicates:
+#            - Path=/order/**
+#        - id: client2-authservice
+#          uri: lb://CLIENT2-AUTHSERVICE
+#          predicates:
+#            - Path=/auth/**
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+    register-with-eureka: true
+    fetch-registry: true
